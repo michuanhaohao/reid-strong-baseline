@@ -15,6 +15,26 @@ Bag of tricks
 - BNNeck
 - Center loss
 
+## Pipeline
+<div align=center>
+<img src='imgs/pipeline.jpg' width='800'>
+</div>
+
+## Results (rank1/mAP)
+| Model | Market1501 | DukeMTMC-reID |
+| --- | -- | -- |
+| Standard baseline | 87.7 (74.0) |  79.7 (63.8) |
+| +Warmup | 88.7 (75.2) |  80.6(65.1) |
+| +Random erasing augmentation | 91.3 (79.3) |  81.5 (68.3) |
+| +Label smoothing | 91.4 (80.3) |  82.4 (69.3) |
+| +Last stride=1 | 92.0 (81.7) | 82.6 (70.6) |
+| +BNNeck | 94.1 (85.7) | 86.2 (75.9) |
+| +Center loss | 94.5 (85.9) | 86.4 (76.4) |
+| +Reranking | 95.4 (94.2) | 90.3 (89.1) |
+
+[model(Market1501)]()
+[model(DukeMTMC-reID)]()
+
 ## Get Started
 The designed architecture follows this guide [PyTorch-Project-Template](https://github.com/L1aoXingyu/PyTorch-Project-Template), you can check each folder's purpose by yourself.
 
@@ -23,7 +43,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 2. Run `git clone... `
 
 3. Install dependencies:
-    - [pytorch 1.0](https://pytorch.org/)
+    - [pytorch>=0.4](https://pytorch.org/)
     - torchvision
     - [ignite](https://github.com/pytorch/ignite)
     - [yacs](https://github.com/rbgirshick/yacs)
@@ -89,6 +109,8 @@ python3 tools/train.py --config_file='configs/softmax_triplet_with_center.yml' M
 ## Test
 You can test your model's performance directly by running these commands in `.sh ` files. You can also change the configuration to determine which feature of BNNeck and whether the feature is normalized (equivalent to use Cosine distance or Euclidean distance) for testing.
 
+Please replace the data path of the model.
+
 1. Test with Euclidean distance using feature before BN without re-ranking,.
 
 ```bash
@@ -105,8 +127,5 @@ python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MO
 python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
 
-## Results
-
-**Network architecture**
 
 
