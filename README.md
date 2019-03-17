@@ -1,5 +1,5 @@
-# ReID Strong Baseline
-Paper:Bags of Tricks and A Strong Baseline for Deep Person Re-identiﬁcation.
+# Bags of Tricks and A Strong ReID Baseline
+Paper:
 The codes are expanded on a  [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-author Xingyu Liao.
 
 We support
@@ -83,7 +83,7 @@ python3 tools/train.py --config_file='configs/softmax_triplet.yml' MODEL.DEVICE_
 
 
 ```bash
-python3 tools/train.py --config_file='configs/softmax_triplet.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" MODEL.IF_WITH_CENTER "('yes')" MODEL.METRIC_LOSS_TYPE "('triplet_center')" OUTPUT_DIR "('your path to save checkpoints and logs')"
+python3 tools/train.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" OUTPUT_DIR "('your path to save checkpoints and logs')"
 ```
 
 ## Test
@@ -92,17 +92,17 @@ You can test your model's performance directly by running these commands in `.sh
 1. Test with Euclidean distance using feature before BN without re-ranking,.
 
 ```bash
-python3 tools/test.py --config_file='configs/softmax_triplet.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('market1501')" MODEL.IF_WITH_CENTER "('yes')" MODEL.METRIC_LOSS_TYPE "('triplet_center')" TEST.NECK_FEAT "('before')" TEST.FEAT_NORM "('no')" TEST.WEIGHT "('your path to trained checkpoints')"
+python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('market1501')" TEST.NECK_FEAT "('before')" TEST.FEAT_NORM "('no')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
 2. Test with Cosine distance using feature after BN without re-ranking,.
 
 ```bash
-python3 tools/test.py --config_file='configs/softmax_triplet.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('market1501')" MODEL.IF_WITH_CENTER "('yes')" MODEL.METRIC_LOSS_TYPE "('triplet_center')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
+python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('market1501')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
 3. Test with Cosine distance using feature after BN with re-ranking
 
 ```bash
-python3 tools/test.py --config_file='configs/softmax_triplet.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" MODEL.IF_WITH_CENTER "('yes')" MODEL.METRIC_LOSS_TYPE "('triplet_center')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
+python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
 
 ## Results
