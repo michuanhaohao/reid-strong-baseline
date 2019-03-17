@@ -1,6 +1,13 @@
 # Bags of Tricks and A Strong ReID Baseline
-Paper:
-The codes are expanded on a  [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-author Xingyu Liao.
+Paper: "Bags of Tricks and A Strong Baseline for Person Re-identification"
+
+The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-author [Xingyu Liao](https://github.com/L1aoXingyu).
+
+## Authors
+- [Hao Luo](https://github.com/michuanhaohao)
+- [Youzhi Gu](https://github.com/shaoniangu)
+- [Xingyu Liao](https://github.com/L1aoXingyu)
+- [Shenqi Lai](https://github.com/xiaolai-sqlai)
 
 We support
 - [x] easy dataset preparation
@@ -33,6 +40,7 @@ Bag of tricks
 | +Reranking | 95.4 (94.2) | 90.3 (89.1) |
 
 [model(Market1501)]()
+
 [model(DukeMTMC-reID)]()
 
 ## Get Started
@@ -52,7 +60,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
     Create a directory to store reid datasets under this repo via
     ```bash
-    cd reid_baseline
+    cd reid-strong-baseline
     mkdir data
     ```
     （1）Market1501
