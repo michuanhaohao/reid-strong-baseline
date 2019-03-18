@@ -1,5 +1,5 @@
 # Bags of Tricks and A Strong ReID Baseline
-Paper: "Bags of Tricks and A Strong Baseline for Person Re-identification"
+Paper: "Bags of Tricks and A Strong Baseline for Deep Person Re-identification"
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
@@ -39,9 +39,9 @@ Bag of tricks
 | +Center loss | 94.5 (85.9) | 86.4 (76.4) |
 | +Reranking | 95.4 (94.2) | 90.3 (89.1) |
 
-[model(Market1501)]()
+[model(Market1501)](https://drive.google.com/open?id=1hn0sXLZ5yJcxtmuY-ItQfYD7hBtHwt7A)
 
-[model(DukeMTMC-reID)]()
+[model(DukeMTMC-reID)](https://drive.google.com/open?id=1LARvQe-gUbflbanidUM0keKmHoKTpLUj)
 
 ## Get Started
 The designed architecture follows this guide [PyTorch-Project-Template](https://github.com/L1aoXingyu/PyTorch-Project-Template), you can check each folder's purpose by yourself.
