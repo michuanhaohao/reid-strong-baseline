@@ -1,7 +1,7 @@
 # Bags of Tricks and A Strong ReID Baseline
 Paper: "Bags of Tricks and A Strong Baseline for Person Re-identification"
 
-The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-author [Xingyu Liao](https://github.com/L1aoXingyu).
+The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
 ## Authors
 - [Hao Luo](https://github.com/michuanhaohao)
@@ -48,7 +48,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
 1. `cd` to folder where you want to download this repo
 
-2. Run `git clone... `
+2. Run `git clone https://github.com/michuanhaohao/reid-strong-baseline.git`
 
 3. Install dependencies:
     - [pytorch>=0.4](https://pytorch.org/)
