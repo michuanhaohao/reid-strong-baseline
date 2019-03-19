@@ -1,5 +1,5 @@
 # Bags of Tricks and A Strong ReID Baseline
-Paper: "Bags of Tricks and A Strong Baseline for Deep Person Re-identification"
+Paper: "Bags of Tricks and A Strong Baseline for Deep Person Re-identification"[[pdf]](https://arxiv.org/abs/1903.07071)
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
