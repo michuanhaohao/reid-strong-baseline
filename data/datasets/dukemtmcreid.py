@@ -67,7 +67,7 @@ class DukeMTMCreID(BaseImageDataset):
         fpath = osp.join(self.dataset_dir, osp.basename(self.dataset_url))
 
         print("Downloading DukeMTMC-reID dataset")
-        urllib.urlretrieve(self.dataset_url, fpath)
+        urllib.request.urlretrieve(self.dataset_url, fpath)
 
         print("Extracting files")
         zip_ref = zipfile.ZipFile(fpath, 'r')
