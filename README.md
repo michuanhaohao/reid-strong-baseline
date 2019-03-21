@@ -22,6 +22,15 @@ Bag of tricks
 - BNNeck
 - Center loss
 
+## TODO list
+In the future, we will
+- [] support more datasets
+- [] support more models
+- [] speed up inference
+- [] support multi-gpus training
+- [] explore more tricks
+
+
 ## Pipeline
 <div align=center>
 <img src='imgs/pipeline.jpg' width='800'>
