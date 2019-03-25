@@ -10,6 +10,12 @@ import torch
 from torch import nn
 
 
+def conv3x3(in_planes, out_planes, stride=1):
+    """3x3 convolution with padding"""
+    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,
+                     padding=1, bias=False)
+
+
 class BasicBlock(nn.Module):
     expansion = 1
 
@@ -40,6 +46,7 @@ class BasicBlock(nn.Module):
         out = self.relu(out)
 
         return out
+
 
 class Bottleneck(nn.Module):
     expansion = 4
@@ -87,6 +94,7 @@ class ResNet(nn.Module):
         self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3,
                                bias=False)
         self.bn1 = nn.BatchNorm2d(64)
+        # self.relu = nn.ReLU(inplace=True)   # add missed relu
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
         self.layer1 = self._make_layer(block, 64, layers[0])
         self.layer2 = self._make_layer(block, 128, layers[1], stride=2)
@@ -114,6 +122,7 @@ class ResNet(nn.Module):
     def forward(self, x):
         x = self.conv1(x)
         x = self.bn1(x)
+        # x = self.relu(x)    # add missed relu
         x = self.maxpool(x)
 
         x = self.layer1(x)

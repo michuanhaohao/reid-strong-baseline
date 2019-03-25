@@ -11,8 +11,6 @@ from .backbones.resnet import ResNet, BasicBlock, Bottleneck
 from .backbones.senet import SENet, SEResNetBottleneck, SEBottleneck, SEResNeXtBottleneck
 
 
-
-
 def weights_init_kaiming(m):
     classname = m.__class__.__name__
     if classname.find('Linear') != -1:
@@ -96,7 +94,7 @@ class Baseline(nn.Module):
                               downsample_padding=0,
                               last_stride=last_stride)  
         elif model_name == 'se_resnext50':
-            self.base = SENet(block=SEResNeXtBottleneck, 
+            self.base = SENet(block=SEResNeXtBottleneck,
                               layers=[3, 4, 6, 3], 
                               groups=32, 
                               reduction=16,
@@ -107,7 +105,7 @@ class Baseline(nn.Module):
                               downsample_padding=0,
                               last_stride=last_stride) 
         elif model_name == 'se_resnext101':
-            self.base = SENet(blok=SEResNeXtBottleneck, 
+            self.base = SENet(block=SEResNeXtBottleneck,
                               layers=[3, 4, 23, 3], 
                               groups=32, 
                               reduction=16,
@@ -124,7 +122,7 @@ class Baseline(nn.Module):
                               reduction=16,
                               dropout_p=0.2, 
                               last_stride=last_stride)
-            
+
             
         self.base.load_param(model_path)
         self.gap = nn.AdaptiveAvgPool2d(1)

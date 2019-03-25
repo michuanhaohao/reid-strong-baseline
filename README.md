@@ -67,11 +67,8 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
 4. Prepare dataset
 
-    Create a directory to store reid datasets under this repo via
-    ```bash
-    cd reid-strong-baseline
-    mkdir data
-    ```
+    Create a directory to store reid datasets under this repo or outside this repo. Remember to set your path to the root of the dataset in `config/defaults.py` for all training and testing or set in every single config file in `configs/` or set in every single command.
+
     （1）Market1501
 
     * Download dataset to `data/` from http://www.liangzheng.org/Project/project_reid.html
@@ -99,11 +96,20 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
     ```
 
 5. Prepare pretrained model if you don't have
+
+    （1）resnet
+
     ```python
     from torchvision import models
     models.resnet50(pretrained=True)
     ```
-    Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/`.
+    （2）senet
+
+    ```python
+    import torch.utils.model_zoo as model_zoo
+    model_zoo.load_url('the pth you want to download (specific urls are listed in  ./modeling/backbones/senet.py)')
+    ```
+    Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/` or set in every single command.
 
 6. If you want to know the detained configurations and their meaning, please refer to `config/defaults.py`. If you want to set your own parameters, you can follow our method: create a new yml file, then set your own parameters.  Add `--config_file='configs/your yml file'` int the commands described below, then our code will merge your configuration. automatically.
 
