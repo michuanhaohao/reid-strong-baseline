@@ -69,7 +69,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
     Create a directory to store reid datasets under this repo or outside this repo. Remember to set your path to the root of the dataset in `config/defaults.py` for all training and testing or set in every single config file in `configs/` or set in every single command.
 
-    You can reate a directory to store reid datasets under this repo via
+    You can create a directory to store reid datasets under this repo via
 
     ```bash
     cd reid-strong-baseline
@@ -154,5 +154,5 @@ python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MO
 3. Test with Cosine distance using feature after BN with re-ranking
 
 ```bash
-python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
+python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')
 ```
