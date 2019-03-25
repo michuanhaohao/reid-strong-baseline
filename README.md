@@ -111,7 +111,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
     ```
     Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/` or set in every single command.
 
-6. If you want to know the detained configurations and their meaning, please refer to `config/defaults.py`. If you want to set your own parameters, you can follow our method: create a new yml file, then set your own parameters.  Add `--config_file='configs/your yml file'` int the commands described below, then our code will merge your configuration. automatically.
+6. If you want to know the detailed configurations and their meaning, please refer to `config/defaults.py`. If you want to set your own parameters, you can follow our method: create a new yml file, then set your own parameters.  Add `--config_file='configs/your yml file'` int the commands described below, then our code will merge your configuration. automatically.
 
 ## Train
 You can run these commands in  `.sh ` files for training different datasets of differernt loss.  You can also directly run code `sh *.sh` to run our demo.
@@ -149,6 +149,3 @@ python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MO
 ```bash
 python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
-
-
-
