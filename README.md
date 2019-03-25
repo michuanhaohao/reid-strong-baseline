@@ -69,6 +69,13 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
     Create a directory to store reid datasets under this repo or outside this repo. Remember to set your path to the root of the dataset in `config/defaults.py` for all training and testing or set in every single config file in `configs/` or set in every single command.
 
+    You can reate a directory to store reid datasets under this repo via
+
+    ```bash
+    cd reid-strong-baseline
+    mkdir data
+    ```
+
     （1）Market1501
 
     * Download dataset to `data/` from http://www.liangzheng.org/Project/project_reid.html
