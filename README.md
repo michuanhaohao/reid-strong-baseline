@@ -137,7 +137,7 @@ python3 tools/train.py --config_file='configs/softmax_triplet_with_center.yml' M
 ```
 
 ## Test
-You can test your model's performance directly by running these commands in `.sh ` files. You can also change the configuration to determine which feature of BNNeck and whether the feature is normalized (equivalent to use Cosine distance or Euclidean distance) for testing.
+You can test your model's performance directly by running these commands in `.sh ` files. You can also change the configuration to determine which feature of BNNeck is used and whether the feature is normalized (equivalent to use Cosine distance or Euclidean distance) for testing.
 
 Please replace the data path of the model.
 
@@ -154,5 +154,6 @@ python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MO
 3. Test with Cosine distance using feature after BN with re-ranking
 
 ```bash
-python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')
+python3 tools/test.py --config_file='configs/softmax_triplet_with_center.yml' MODEL.DEVICE_ID "('your device id')" DATASETS.NAMES "('dukemtmc')" TEST.NECK_FEAT "('after')" TEST.FEAT_NORM "('yes')" TEST.RE_RANKING "('yes')" TEST.WEIGHT "('your path to trained checkpoints')"
 ```
+
