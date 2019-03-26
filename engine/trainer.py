@@ -130,7 +130,8 @@ def do_train(
         optimizer,
         scheduler,
         loss_fn,
-        num_query
+        num_query,
+        start_epoch
 ):
     log_period = cfg.SOLVER.LOG_PERIOD
     checkpoint_period = cfg.SOLVER.CHECKPOINT_PERIOD
@@ -154,6 +155,10 @@ def do_train(
     # average metric to attach on trainer
     RunningAverage(output_transform=lambda x: x[0]).attach(trainer, 'avg_loss')
     RunningAverage(output_transform=lambda x: x[1]).attach(trainer, 'avg_acc')
+
+    @trainer.on(Events.STARTED)
+    def start_training(engine):
+        engine.state.epoch = start_epoch
 
     @trainer.on(Events.EPOCH_STARTED)
     def adjust_learning_rate(engine):
@@ -201,7 +206,8 @@ def do_train_with_center(
         optimizer_center,
         scheduler,
         loss_fn,
-        num_query
+        num_query,
+        start_epoch
 ):
     log_period = cfg.SOLVER.LOG_PERIOD
     checkpoint_period = cfg.SOLVER.CHECKPOINT_PERIOD
@@ -218,13 +224,19 @@ def do_train_with_center(
     timer = Timer(average=True)
 
     trainer.add_event_handler(Events.EPOCH_COMPLETED, checkpointer, {'model': model.state_dict(),
-                                                                     'optimizer': optimizer.state_dict()})
+                                                                     'optimizer': optimizer.state_dict(),
+                                                                     'optimizer_center': optimizer_center.state_dict()})
+
     timer.attach(trainer, start=Events.EPOCH_STARTED, resume=Events.ITERATION_STARTED,
                  pause=Events.ITERATION_COMPLETED, step=Events.ITERATION_COMPLETED)
 
     # average metric to attach on trainer
     RunningAverage(output_transform=lambda x: x[0]).attach(trainer, 'avg_loss')
     RunningAverage(output_transform=lambda x: x[1]).attach(trainer, 'avg_acc')
+
+    @trainer.on(Events.STARTED)
+    def start_training(engine):
+        engine.state.epoch = start_epoch
 
     @trainer.on(Events.EPOCH_STARTED)
     def adjust_learning_rate(engine):

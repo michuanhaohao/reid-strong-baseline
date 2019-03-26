@@ -27,6 +27,9 @@ _C.MODEL.NAME = 'resnet50'
 _C.MODEL.LAST_STRIDE = 1
 # Path to pretrained model of backbone
 _C.MODEL.PRETRAIN_PATH = ''
+# Use ImageNet pretrained model to initialize backbone or use self trained model to initialize the whole model
+# Options: 'imagenet' or 'self'
+_C.MODEL.PRETRAIN_CHOICE = 'imagenet'
 # If train with BNNeck, options: 'bnneck' or 'no'
 _C.MODEL.NECK = 'bnneck'
 # If train loss include center loss, options: 'yes' or 'no'. Loss with center loss has different optimizer configuration

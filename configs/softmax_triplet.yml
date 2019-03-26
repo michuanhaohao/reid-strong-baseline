@@ -1,4 +1,5 @@
 MODEL:
+  PRETRAIN_CHOICE: 'imagenet'
   PRETRAIN_PATH: '/home/haoluo/.torch/models/resnet50-19c8e357.pth'
   METRIC_LOSS_TYPE: 'triplet'
   IF_LABELSMOOTH: 'on'

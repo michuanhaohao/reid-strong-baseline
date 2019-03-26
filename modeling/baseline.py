@@ -37,7 +37,7 @@ def weights_init_classifier(m):
 class Baseline(nn.Module):
     in_planes = 2048
 
-    def __init__(self, num_classes, last_stride, model_path, neck, neck_feat, model_name):
+    def __init__(self, num_classes, last_stride, model_path, neck, neck_feat, model_name, pretrain_choice):
         super(Baseline, self).__init__()
         if model_name == 'resnet18':
             self.base = ResNet(last_stride=last_stride, 
@@ -117,14 +117,14 @@ class Baseline(nn.Module):
                               last_stride=last_stride)
         elif model_name == 'senet154':
             self.base = SENet(block=SEBottleneck, 
-                              layers=[3, 8, 36, 3], 
+                              layers=[3, 8, 36, 3],
                               groups=64, 
                               reduction=16,
                               dropout_p=0.2, 
                               last_stride=last_stride)
 
-            
-        self.base.load_param(model_path)
+        if pretrain_choice == 'imagenet':
+            self.base.load_param(model_path)
         self.gap = nn.AdaptiveAvgPool2d(1)
         # self.gap = nn.AdaptiveMaxPool2d(1)
         self.num_classes = num_classes
@@ -167,6 +167,6 @@ class Baseline(nn.Module):
     def load_param(self, trained_path):
         param_dict = torch.load(trained_path)
         for i in param_dict:
-            if 'classifier' in i:
-                continue
+            # if 'classifier' in i:
+            #     continue
             self.state_dict()[i].copy_(param_dict[i])
