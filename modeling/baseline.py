@@ -40,10 +40,12 @@ class Baseline(nn.Module):
     def __init__(self, num_classes, last_stride, model_path, neck, neck_feat, model_name, pretrain_choice):
         super(Baseline, self).__init__()
         if model_name == 'resnet18':
+            self.in_planes = 512
             self.base = ResNet(last_stride=last_stride, 
                                block=BasicBlock, 
                                layers=[2, 2, 2, 2])
         elif model_name == 'resnet34':
+            self.in_planes = 512
             self.base = ResNet(last_stride=last_stride,
                                block=BasicBlock,
                                layers=[3, 4, 6, 3])
@@ -125,6 +127,8 @@ class Baseline(nn.Module):
 
         if pretrain_choice == 'imagenet':
             self.base.load_param(model_path)
+            print('Loading pretrained ImageNet model......')
+
         self.gap = nn.AdaptiveAvgPool2d(1)
         # self.gap = nn.AdaptiveMaxPool2d(1)
         self.num_classes = num_classes
