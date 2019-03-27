@@ -86,7 +86,7 @@ class Baseline(nn.Module):
                               last_stride=last_stride)
         elif model_name == 'se_resnet152':
             self.base = SENet(block=SEResNetBottleneck, 
-                              layers=[3, 4, 36, 3], 
+                              layers=[3, 8, 36, 3],
                               groups=1, 
                               reduction=16,
                               dropout_p=None, 
