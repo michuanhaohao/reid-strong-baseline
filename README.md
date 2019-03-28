@@ -48,6 +48,18 @@ In the future, we will
 | +Center loss | 94.5 (85.9) | 86.4 (76.4) |
 | +Reranking | 95.4 (94.2) | 90.3 (89.1) |
 
+| Backbone | Market1501 | DukeMTMC-reID |
+| --- | -- | -- |
+| ResNet18 | 91.7 (77.8) |  82.5 (68.8) |
+| ResNet34 | 92.7 (82.7) |  86.4(73.6) |
+| ResNet50 | 94.5 (85.9) | 86.4 (76.4) |
+| ResNet101 | 94.5 (87.1) |  87.6 (77.6) |
+| ResNet152 | 80.9 (59.0) | 87.5 (78.0) |
+| SeResNet50 | 94.4 (86.3) | 86.4 (76.5) |
+| SeResNet101 | 94.6 (87.3) | 87.5 (78.0) |
+| SeResNeXt50 | 94.9 (87.6) | 88.0 (78.3) |
+| SeResNeXt101 | 95.0 (88.0) | 88.4 (79.0) |
+
 [model(Market1501)](https://drive.google.com/open?id=1hn0sXLZ5yJcxtmuY-ItQfYD7hBtHwt7A)
 
 [model(DukeMTMC-reID)](https://drive.google.com/open?id=1LARvQe-gUbflbanidUM0keKmHoKTpLUj)
