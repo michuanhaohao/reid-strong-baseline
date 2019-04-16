@@ -6,6 +6,7 @@
 import logging
 
 import torch
+import torch.nn as nn
 from ignite.engine import Engine
 
 from utils.reid_metric import R1_mAP, R1_mAP_reranking
@@ -25,13 +26,15 @@ def create_supervised_evaluator(model, metrics,
         Engine: an evaluator engine with supervised inference function
     """
     if device:
+        if torch.cuda.device_count() > 1:
+            model = nn.DataParallel(model)
         model.to(device)
 
     def _inference(engine, batch):
         model.eval()
         with torch.no_grad():
             data, pids, camids = batch
-            data = data.cuda()
+            data = data.to(device) if torch.cuda.device_count() >= 1 else data
             feat = model(data)
             return feat, pids, camids
 
