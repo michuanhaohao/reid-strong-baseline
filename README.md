@@ -10,7 +10,6 @@ The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_b
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
   year={2019}
 }
-}
 ```
 
 ## Authors
