@@ -1,7 +1,17 @@
 # Bags of Tricks and A Strong ReID Baseline
-Paper: "Bags of Tricks and A Strong Baseline for Deep Person Re-identification"[[pdf]](https://arxiv.org/abs/1903.07071)
+Paper: "Bag of Tricks and A Strong Baseline for Deep Person Re-identification"[[pdf]](https://arxiv.org/abs/1903.07071)
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
+
+```
+@inproceedings{luo2019bag,
+  title={Bag of Tricks and A Strong Baseline for Deep Person Re-identification},
+  author={Luo, Hao and Gu, Youzhi and Liao, Xingyu and Lai, Shenqi and Jiang, Wei},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2019}
+}
+}
+```
 
 ## Authors
 - [Hao Luo](https://github.com/michuanhaohao)
@@ -74,7 +84,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 3. Install dependencies:
     - [pytorch>=0.4](https://pytorch.org/)
     - torchvision
-    - [ignite](https://github.com/pytorch/ignite)
+    - [ignite=0.1.2](https://github.com/pytorch/ignite) (Note: V0.2.0 may result in an error)
     - [yacs](https://github.com/rbgirshick/yacs)
 
 4. Prepare dataset
