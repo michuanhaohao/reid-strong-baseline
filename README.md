@@ -3,6 +3,8 @@ Paper: "Bag of Tricks and A Strong Baseline for Deep Person Re-identification"[[
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
+Another re-implement is developed by python2.7 and pytorch0.4. [link](https://github.com/wangguanan/Pytorch-Person-REID-Baseline-Bag-of-Tricks)
+
 ```
 @inproceedings{luo2019bag,
   title={Bag of Tricks and A Strong Baseline for Deep Person Re-identification},
