@@ -5,7 +5,7 @@ The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_b
 
 Another re-implement is developed by python2.7 and pytorch0.4. [link](https://github.com/wangguanan/Pytorch-Person-REID-Baseline-Bag-of-Tricks)
 
-A tiny repo achieves on Market1501. [link](https://github.com/lulujianjie/person-reid-tiny-baseline)
+A tiny repo with simple re-implement. [link](https://github.com/lulujianjie/person-reid-tiny-baseline)
 
 ```
 @InProceedings{Luo_2019_CVPR_Workshops,
