@@ -237,6 +237,7 @@ def do_train_with_center(
 
     trainer.add_event_handler(Events.EPOCH_COMPLETED, checkpointer, {'model': model.state_dict(),
                                                                      'optimizer': optimizer.state_dict(),
+                                                                     'center_param': center_criterion.state_dict(),
                                                                      'optimizer_center': optimizer_center.state_dict()})
 
     timer.attach(trainer, start=Events.EPOCH_STARTED, resume=Events.ITERATION_STARTED,
