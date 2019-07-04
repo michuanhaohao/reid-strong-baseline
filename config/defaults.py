@@ -35,7 +35,7 @@ _C.MODEL.NECK = 'bnneck'
 # If train loss include center loss, options: 'yes' or 'no'. Loss with center loss has different optimizer configuration
 _C.MODEL.IF_WITH_CENTER = 'no'
 # The loss type of metric loss
-# options:'triplet','cluster','triplet_cluster','center','range_center','triplet_center','triplet_range_center'
+# options:['triplet'](without center loss) or ['center','triplet_center'](with center loss)
 _C.MODEL.METRIC_LOSS_TYPE = 'triplet'
 # For example, if loss type is cross entropy loss + triplet loss + center loss
 # the setting should be: _C.MODEL.METRIC_LOSS_TYPE = 'triplet_center' and _C.MODEL.IF_WITH_CENTER = 'yes'
