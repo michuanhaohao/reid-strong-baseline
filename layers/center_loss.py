@@ -44,13 +44,15 @@ class CenterLoss(nn.Module):
         labels = labels.unsqueeze(1).expand(batch_size, self.num_classes)
         mask = labels.eq(classes.expand(batch_size, self.num_classes))
 
-        dist = []
-        for i in range(batch_size):
-            value = distmat[i][mask[i]]
-            value = value.clamp(min=1e-12, max=1e+12)  # for numerical stability
-            dist.append(value)
-        dist = torch.cat(dist)
-        loss = dist.mean()
+        dist = distmat * mask.float()
+        loss = dist.clamp(min=1e-12, max=1e+12).sum() / batch_size
+        #dist = []
+        #for i in range(batch_size):
+        #    value = distmat[i][mask[i]]
+        #    value = value.clamp(min=1e-12, max=1e+12)  # for numerical stability
+        #    dist.append(value)
+        #dist = torch.cat(dist)
+        #loss = dist.mean()
         return loss
 
 
