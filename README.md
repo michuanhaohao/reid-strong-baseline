@@ -8,9 +8,11 @@ Bag of Tricks and A Strong Baseline for Deep Person Re-identification. CVPRW2019
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
-Another re-implement is developed by python2.7 and pytorch0.4. [link](https://github.com/wangguanan/Pytorch-Person-REID-Baseline-Bag-of-Tricks)
+Another re-implement is developed by python2.7 and pytorch0.4. [[link]](https://github.com/wangguanan/Pytorch-Person-REID-Baseline-Bag-of-Tricks)
 
-A tiny repo with simple re-implement. [link](https://github.com/lulujianjie/person-reid-tiny-baseline)
+A tiny repo with simple re-implement. [[link]](https://github.com/lulujianjie/person-reid-tiny-baseline)
+
+Our baseline also achieves great performance on __Vehicle ReID__ task! [[link]](https://github.com/DTennant/reid_baseline_with_syncbn)
 
 ```
 @InProceedings{Luo_2019_CVPR_Workshops,
@@ -32,6 +34,8 @@ We support
 - [x] easy dataset preparation
 - [x] end-to-end training and evaluation
 - [x] high modular management
+- [x] speed up inference [[link]](https://github.com/DTennant/reid_baseline_with_syncbn)
+- [x] support multi-gpus training [[link]](https://github.com/DTennant/reid_baseline_with_syncbn)
 
 Bag of tricks
 - Warm up learning rate
@@ -45,8 +49,6 @@ Bag of tricks
 In the future, we will
 - [] support more datasets
 - [] support more models
-- [] speed up inference
-- [] support multi-gpus training
 - [] explore more tricks
 
 
