@@ -80,6 +80,7 @@ In the future, we will
 | SeResNet101 | 94.6 (87.3) | 87.5 (78.0) |
 | SeResNeXt50 | 94.9 (87.6) | 88.0 (78.3) |
 | SeResNeXt101 | 95.0 (88.0) | 88.4 (79.0) |
+| IBN-Net50-a | 95.0 (88.2) | 90.1 (79.1) |
 
 [model(Market1501)](https://drive.google.com/open?id=1hn0sXLZ5yJcxtmuY-ItQfYD7hBtHwt7A)
 
@@ -137,7 +138,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
 5. Prepare pretrained model if you don't have
 
-    （1）Resnet
+    （1）ResNet
 
     ```python
     from torchvision import models
@@ -151,8 +152,10 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
     ```
     Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/` or set in every single command.
 
-    （3）Load your self-trained model
-
+    （3）ResNet50_IBN_a
+    Please download from here (Please wait).
+    
+    （4）Load your self-trained model
     If you want to continue your train process based on your self-trained model, you can change the configuration `PRETRAIN_CHOICE` from 'imagenet' to 'self' and set the `PRETRAIN_PATH` to your self-trained model. We offer `Experiment-pretrain_choice-all_tricks-tri_center-market.sh` as an example. 
 
 6. If you want to know the detailed configurations and their meaning, please refer to `config/defaults.py`. If you want to set your own parameters, you can follow our method: create a new yml file, then set your own parameters.  Add `--config_file='configs/your yml file'` int the commands described below, then our code will merge your configuration. automatically.
