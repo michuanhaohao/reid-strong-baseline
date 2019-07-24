@@ -152,7 +152,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
     ```
     Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/` or set in every single command.
 
-    （3）ResNet50_IBN_a
+    （3）ResNet_IBN_a
 
     You can download from here [[link]](https://github.com/XingangPan/IBN-Net)
 
