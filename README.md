@@ -153,7 +153,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
     Then it will automatically download model in `~/.torch/models/`, you should set this path in `config/defaults.py` for all training or set in every single training config file in `configs/` or set in every single command.
 
     （3）ResNet50_IBN_a
-    Please download from here (Please wait).
+    You can download from here [[link]](https://github.com/XingangPan/IBN-Net)
     
     （4）Load your self-trained model
     If you want to continue your train process based on your self-trained model, you can change the configuration `PRETRAIN_CHOICE` from 'imagenet' to 'self' and set the `PRETRAIN_PATH` to your self-trained model. We offer `Experiment-pretrain_choice-all_tricks-tri_center-market.sh` as an example. 
