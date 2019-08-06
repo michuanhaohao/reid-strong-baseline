@@ -2,9 +2,12 @@
 
 Bag of Tricks and A Strong Baseline for Deep Person Re-identification. CVPRW2019, Oral.
 
-[[pdf]](http://openaccess.thecvf.com/content_CVPRW_2019/papers/TRMTMCT/Luo_Bag_of_Tricks_and_a_Strong_Baseline_for_Deep_Person_CVPRW_2019_paper.pdf)
+[[PDF]](http://openaccess.thecvf.com/content_CVPRW_2019/papers/TRMTMCT/Luo_Bag_of_Tricks_and_a_Strong_Baseline_for_Deep_Person_CVPRW_2019_paper.pdf)
 [[Slides]](https://drive.google.com/open?id=1h9SgdJenvfoNp9PTUxPiz5_K5HFCho-V)
 [[Poster]](https://drive.google.com/open?id=1izZYAwylBsrldxSMqHCH432P6hnyh1vR)
+[[Journal Version]](https://arxiv.org/pdf/1906.08332)
+
+### We are very grateful for your contribution to our project and hope that this project can help your research or work.
 
 The codes are expanded on a [ReID-baseline](https://github.com/L1aoXingyu/reid_baseline) , which is open sourced by our co-first author [Xingyu Liao](https://github.com/L1aoXingyu).
 
@@ -13,6 +16,9 @@ Another re-implement is developed by python2.7 and pytorch0.4. [[link]](https://
 A tiny repo with simple re-implement. [[link]](https://github.com/lulujianjie/person-reid-tiny-baseline)
 
 Our baseline also achieves great performance on __Vehicle ReID__ task! [[link]](https://github.com/DTennant/reid_baseline_with_syncbn)
+
+With Ranked List loss(CVPR2019)[[link]](http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Ranked_List_Loss_for_Deep_Metric_Learning_CVPR_2019_paper.pdf), our baseline can achieve better performance. [[link]](https://github.com/Qidian213/Ranked_Person_ReID)
+
 
 ```
 @InProceedings{Luo_2019_CVPR_Workshops,
