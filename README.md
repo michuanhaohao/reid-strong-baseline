@@ -160,7 +160,7 @@ The designed architecture follows this guide [PyTorch-Project-Template](https://
 
     （3）ResNet_IBN_a
 
-    You can download from here [[link]](https://github.com/XingangPan/IBN-Net)
+    You can download the ImageNet pre-trained weights from here [[link]](https://drive.google.com/open?id=1_r4wp14hEMkABVow58Xr4mPg7gvgOMto)
 
     （4）Load your self-trained model
     If you want to continue your train process based on your self-trained model, you can change the configuration `PRETRAIN_CHOICE` from 'imagenet' to 'self' and set the `PRETRAIN_PATH` to your self-trained model. We offer `Experiment-pretrain_choice-all_tricks-tri_center-market.sh` as an example. 
