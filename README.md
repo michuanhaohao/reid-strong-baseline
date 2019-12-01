@@ -1,11 +1,14 @@
 # Bag of Tricks and A Strong ReID Baseline
 
 Bag of Tricks and A Strong Baseline for Deep Person Re-identification. CVPRW2019, Oral.
+A Strong Baseline and Batch Normalization Neck for Deep Person Re-identification. IEEE Transactions on Multimedia (Accepted).
 
 [[PDF]](http://openaccess.thecvf.com/content_CVPRW_2019/papers/TRMTMCT/Luo_Bag_of_Tricks_and_a_Strong_Baseline_for_Deep_Person_CVPRW_2019_paper.pdf)
 [[Slides]](https://drive.google.com/open?id=1h9SgdJenvfoNp9PTUxPiz5_K5HFCho-V)
 [[Poster]](https://drive.google.com/open?id=1izZYAwylBsrldxSMqHCH432P6hnyh1vR)
 [[Journal Version]](https://arxiv.org/pdf/1906.08332)
+
+### News! Our journal version has been accepted by IEEE Transactions on Multimedia.
 
 ### We are very grateful for your contribution to our project and hope that this project can help your research or work.
 
