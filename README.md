@@ -4,10 +4,11 @@ Bag of Tricks and A Strong Baseline for Deep Person Re-identification. CVPRW2019
 
 A Strong Baseline and Batch Normalization Neck for Deep Person Re-identification. IEEE Transactions on Multimedia (Accepted).
 
+[[Journal Version(TMM)]](https://ieeexplore.ieee.org/document/8930088)
 [[PDF]](http://openaccess.thecvf.com/content_CVPRW_2019/papers/TRMTMCT/Luo_Bag_of_Tricks_and_a_Strong_Baseline_for_Deep_Person_CVPRW_2019_paper.pdf)
 [[Slides]](https://drive.google.com/open?id=1h9SgdJenvfoNp9PTUxPiz5_K5HFCho-V)
 [[Poster]](https://drive.google.com/open?id=1izZYAwylBsrldxSMqHCH432P6hnyh1vR)
-[[Journal Version]](https://arxiv.org/pdf/1906.08332)
+
 
 ### News! Our journal version has been accepted by IEEE Transactions on Multimedia.
 
@@ -31,6 +32,16 @@ title = {Bag of Tricks and a Strong Baseline for Deep Person Re-Identification},
 booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
 month = {June},
 year = {2019}
+}
+
+@ARTICLE{Luo_2019_Strong_TMM, 
+author={H. {Luo} and W. {Jiang} and Y. {Gu} and F. {Liu} and X. {Liao} and S. {Lai} and J. {Gu}}, 
+journal={IEEE Transactions on Multimedia}, 
+title={A Strong Baseline and Batch Normalization Neck for Deep Person Re-identification}, 
+year={2019}, 
+pages={1-1}, 
+doi={10.1109/TMM.2019.2958756}, 
+ISSN={1941-0077}, 
 }
 ```
 
