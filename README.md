@@ -9,6 +9,7 @@ A Strong Baseline and Batch Normalization Neck for Deep Person Re-identification
 [[Slides]](https://drive.google.com/open?id=1h9SgdJenvfoNp9PTUxPiz5_K5HFCho-V)
 [[Poster]](https://drive.google.com/open?id=1izZYAwylBsrldxSMqHCH432P6hnyh1vR)
 
+### News! Bases on the strong baseline, we won 3rd place on AICity Challenge 2020. [[PDF]](https://arxiv.org/pdf/2004.10547.pdf) [[Code]](https://github.com/heshuting555/AICITY2020_DMT_VehicleReID)
 
 ### News! Our journal version has been accepted by IEEE Transactions on Multimedia.
 
